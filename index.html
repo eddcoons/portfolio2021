@@ -3,6 +3,7 @@
 <html>
 <title>Emily Coons Portfolio</title>
 <link rel="stylesheet" href="https://use.typekit.net/dez3kff.css">
+<link rel="shortcut icon" type="image/png" href="/favicon_io/favicon.ico"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <body>
 
@@ -93,12 +94,13 @@
 	}
 
 	body {
-		max-width: 75vw;
+		max-width: 100vw;
 		height: 100vh;
 		margin: 0 auto;
 		position: relative;
 		overflow: hidden;
-
+		display: grid;
+		justify-items: center;
 	}
 
 	a {
@@ -107,9 +109,9 @@
 	}
 
 	.title-section {
-	    margin: 15% auto 0;
+	    margin: 5% auto 0;
     	height: 30%;
-    	width: 100%;
+    	width: 80%;
 	}
 
 	.hello-wrapper {
@@ -240,42 +242,52 @@
 
 	.samples-section {
 		display: grid;
-		grid-template-columns: 10px repeat(4, 1fr);
+		grid-template-columns: 30px repeat(4, 1fr);
 		grid-gap: 20px;
 		justify-items: center;
 		position: absolute;
 		bottom: 0;
-		width: 100%;
+		width: 80%;
 		height: 60%;
-		transform: translateY(30%);
+		margin: 0 auto;
+		transform: translateY(70%);
 		animation: reveal 2s 2.1s linear forwards;
+	}
+	
+	@keyframes reveal {
+		100% {
+			transform: translateY(30%) ;
+		}
 	}
 
 	.sample {
 		transition: all 1s ease-in-out;
 		cursor: pointer;
-	}
-	
-	@keyframes reveal {
-		100% {
-			transform: translateY(-5%) ;
-		}
+		border-radius: 10rem 10rem 0 0;
 	}
 
 	.sample-one {
 		transform: translateY(60%) ;
+		background: rgba(234, 91, 62, .3);
+		background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(234,91,62,0.34375) 100%);
 	}
 	
 	.sample-two {
 		transform: translateY(60%) ;
+		background: rgba(91, 134, 229, .3);
+		background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(91,134,229,0.34) 100%);
 
 	}
 	.sample-three {
 		transform: translateY(60%) ;
+		background: rgba(140, 221, 233, .3);
+		background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(142,221,233,0.34) 100%);
 
 	}
 	.sample-four {
 		transform: translateY(60%) ;
+		background: rgba(142, 21, 55, .3);
+		background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(142,21,55,0.34) 100%);
 	}
 	.sample:hover {
 		transform: translateY(20%) ;
@@ -284,25 +296,33 @@
 
 	.sample-info {
 		text-align: center;
-    	border-radius: 100%;
-    	width: 200px;
-    	height: 200px;
+		border-radius: 9rem 9rem 0 0;
+    	/*border-radius: 100%;*/
+    	/*width: 15vw;*/
+    	/*height: 25vh;*/
     	display: flex;
     	flex-direction: column;
     	justify-content: center;
+    	padding: 2rem;
 	}
 	.pepperrodeo .sample-info {
 		background: rgba(234, 91, 62, .3);
+		background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(234,91,62,0.34375) 100%);
 	}
 	.brainframe .sample-info {
 		background: rgba(91, 134, 229, .3);
-	}
-	.pv .sample-info {
-		background: rgba(142, 21, 55, .3);
+		background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(91,134,229,0.34) 100%);
 	}
 	.meditation-chime .sample-info {
 		background: rgba(140, 221, 233, .3);
+		background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(142,221,233,0.34) 100%);
 	}
+	.pv .sample-info {
+		background: rgba(142, 21, 55, .3);
+		background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(142,21,55,0.34) 100%);
+		
+	}
+
 	.sample-info span {
 		font-style: italic;
 		display: block;
@@ -319,150 +339,116 @@
 		display: flex;
 		align-content: center;
 	}
-	@media screen and (min-width: 1700px) {
-		body {
-			max-width: 60vw;
-		}
-		.logos {
-			width: 85%;
-		}
+
+	.meditation-chime, .pv {
+
+		/*margin: 0 1rem;*/
 	}
-	@media screen and (max-width:  1300px) {
-		.samples-title {
-			transform: rotate(180deg) translateY(22%);
-		}
-		.logos {
+
+	@media screen and (max-width: 1100px) {
+		.samples-section {
 			width: 90%;
 		}
 	}
-	@media screen and (max-width:  1030px) {
+
+	@media screen and (max-width: 800px){
 		body {
-			max-width: 85vw;
+			max-width: 100vw;
+			display: grid;
 		}
 
- 	}
-	/*@media screen and (min-width: 1600px) {
-		.logos {
+		.title-section {
+			margin-top: 12%;
 			width: 80%;
 		}
-	}*/
-	/*@media (min-width: 1599px) and (max-width: 1300px){
-		.logos {
-			width: 90%;
+		.hello-wrapper {
+			width: 70%;
 		}
-	}*/
-	@media (min-width: 1066px) and (max-width: 1170px){
+		.welcome-text {
+			font-size: 1.2rem;
+		}
 		.logos {
 			width: 100%;
-		}
-		.logo {
-			width: 2.5%;
-		}
-		.samples-title {
-			transform: rotate(180deg) translateY(25%);
-    		writing-mode: vertical-lr;
-		}
-	}
-	@media (min-width: 1030px) {
-		body {
-			max-width: 85vw;
-		}
-	}
-	@media (min-width: 716px) and (max-width: 1065px){
-		.welcome-text {
-			font-size: 1.5rem;
-		}
-		.logos {
-			width: 90%;
+			margin-top: 5%;
+			justify-content: center;
 		}
 		.logo {
 			width: 3%;
 		}
-
-	}
-	@media screen and (max-width: 950px){
-		body {
-			max-width: 90vw;
-			display: grid;
-		}
-		.title-section {
-			margin-top: 20%;
-			height: 40%;
-		}
-		.hello-wrapper {
-			width: 95%;
-		}
-		.welcome-text {
-			font-size: 1.5rem;
-		}
-		.logos {
-			width: 100%;
-			justify-content: center;
-			margin-top: 1rem;
-			grid-gap: 45px;
-		}
-		.logo {
-			width: 6.5%;
-		}
-		.samples-section {
-			position: relative;
-			grid-template-columns: repeat(4, 1fr);
-    		grid-template-rows: repeat(2, 1fr);
-    		grid-gap: 0;
-			transform: translateY(90%);
-			height: 5%;
-			width: 100%;
-    		margin: 0 auto;
-		}
-		.samples-title {
+    	.samples-section {
+    		grid-template-rows: 40px 1fr 1fr;
+    		grid-template-columns: repeat(2, 1fr);
+    		transform: translateY(0);
+    		height: 55%;
+    	}
+    	.samples-title {
 			transform: rotate(0) translateY(0);
     		writing-mode: horizontal-tb;
-    		transform: translateX(-90%);
-			opacity: 0;
-			animation: slideIn 1.5s 3.5s linear forwards;
-			grid-row: 1;
-			grid-column-start: 1;
-			grid-column-end: 5;
-		}
-		.sample-one, .sample-two, .sample-three, .sample-four {
-			transform: translateY(0);
-			font-size: 10px;
-			animation: slideIn 1.5s 3.5s linear forwards;
-			grid-row:  2;
-			margin: 0 -5px;
-		}
-		.sample-one {
-			transform: translateX(-90%);
-			opacity: 0;
-		}
-		.sample-two{
-			transform: translateX(90%);
-			opacity: 0;
-		}
-		.sample-three {
-			transform: translateY(90%);
-			opacity: 0;
-		}
-		.sample-four {
-			transform: translateY(90%);
-			opacity: 0;
-		}
-		@keyframes slideIn {
+    		grid-row: 1;
+    		grid-column-start: 1;
+    		grid-column-end: 3;
+    		font-size: 1rem;
+    	}
+    	.sample {
+    		max-width: 100%;
+    		width: 100%;
+    		background: rgba(255, 255, 255, 0);
+    	}
+
+    	@keyframes reveal {
 			100% {
-			transform: translateX(0) ;
-			opacity: 1;
+				transform: translateY(-10%) ;
+			}
 		}
+    	.sample a {
+    		width: 100%;
+    	}
+    	.sample-info {
+    		width: 100%;
+    		height: 100%;
+    		/*border-radius: 0;*/
+    		border-radius: 2rem 2rem 0 0;
+    		font-size: .8rem;
+    		padding: 0;
+
+    	}
+    	.sample-one, .sample-two {
+    		grid-row: 2;
+    		transform: translateY(0);
+    	}
+    	.sample-three, .sample-four {
+    		grid-row: 3;
+    		transform: translateY(0);
+    	}
+
+    	.sample-info h4 {
+    		margin-bottom: .1rem;
 		}
-		.sample h4 {
-			font-size: 12px;
-		}
-		.sample-info {
-			width: 170px;
-    		height: 170px;
-		}
-		.sample-info p {
-			padding: .5rem;
+		.sample-one h4, .sample-two h4, .sample-three h4, .sample-four h4, .sample-one p, .sample-two p, .sample-three p, .sample-four p {
+			padding: 0 1rem;
 		}
 
+	}
+
+	@media screen and (max-width: 650px){
+		
+		.title-section {
+			margin-top: 12%;
+		}
+
+		.hello-wrapper {
+			width: 90%;
+		}
+
+		.logo {
+			width: 7%;
+		}
+	}
+
+	@media screen and (max-width: 450px){
+
+		.title-section {
+			margin-top: 25%;
+		}
 	}
 </style>
