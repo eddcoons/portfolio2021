@@ -371,6 +371,7 @@
     		grid-template-columns: repeat(2, 1fr);
     		transform: translateY(0);
     		height: 55%;
+    		opacity: 0;
     	}
     	.samples-title {
 			transform: rotate(0) translateY(0);
@@ -389,6 +390,7 @@
     	@keyframes reveal {
 			100% {
 				transform: translateY(-10%) ;
+				opacity: 1;
 			}
 		}
     	.sample a {
@@ -424,6 +426,10 @@
 
 		.hello-wrapper {
 			width: 90%;
+		}
+
+		.logos {
+			gap: 30px;
 		}
 
 		.logo {
